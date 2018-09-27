@@ -23,7 +23,7 @@
 #  Dan Bode dan@puppetlabs.com
 #  Francois Charlier fcharlier@ploup.net
 #
-class swift::proxy::keystone(
+class swift::proxy::keystoneauth(
   $operator_roles      = ['admin', 'SwiftOperator'],
   $reseller_prefix     = 'AUTH_',
   # DEPRECATED PARAMETERS
@@ -36,7 +36,7 @@ class swift::proxy::keystone(
         warning('is_admin parameter is deprecated, has no effect and will be removed in a future release.')
   }
 
-  concat::fragment { 'swift_keystone':
+  concat::fragment { 'swift_keystoneauth':
     target  => '/etc/swift/proxy-server.conf',
     content => template('swift/proxy/keystone.conf.erb'),
     order   => '180',

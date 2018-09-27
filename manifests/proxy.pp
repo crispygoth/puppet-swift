@@ -169,7 +169,7 @@ class swift::proxy(
     $auth_type = 'tempauth'
   } elsif(member($pipeline, 'swauth')) {
     $auth_type = 'swauth'
-  } elsif(member($pipeline, 'keystone')) {
+  } elsif(member($pipeline, 'keystoneauth')) {
     $auth_type = 'keystone'
   } else {
     warning('no auth type provided in the pipeline')
