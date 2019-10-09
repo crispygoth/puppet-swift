@@ -2,3 +2,6 @@
 [filter:swift3]
 use = egg:swift3#swift3
 location = regionOne
+<%- if @storage_domain then -%>
+storage_domain = <%= @storage_domain %>
+<%- end -%>

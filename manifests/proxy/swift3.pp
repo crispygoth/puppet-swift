@@ -21,7 +21,8 @@
 # Copyright 2012 eNovance licensing@enovance.com
 #
 class swift::proxy::swift3(
-  $ensure = 'present'
+  $ensure         = 'present',
+  $storage_domain = undef,
 ) {
 
   include ::swift::deps
